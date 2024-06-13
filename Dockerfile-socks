@@ -1,0 +1,20 @@
+FROM ubuntu:22.04
+
+
+RUN apt-get -y update \
+  && apt-get install -y --no-install-recommends openssh-client \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+
+RUN useradd -ms /bin/bash ubuntu \
+    && mkdir /home/ubuntu/.ssh \
+    && chown ubuntu:ubuntu /home/ubuntu/.ssh \
+    && chmod 700 /home/ubuntu/.ssh
+
+COPY id_rsa /home/ubuntu/.ssh/id_rsa
+
+RUN chown ubuntu:ubuntu /home/ubuntu/.ssh/id_rsa \
+    && chmod 600 /home/ubuntu/.ssh/id_rsa
+
+ENTRYPOINT ["/usr/bin/ssh"]

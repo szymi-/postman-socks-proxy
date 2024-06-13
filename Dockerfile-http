@@ -1,0 +1,6 @@
+FROM node:current-bullseye
+
+RUN npm install -g http-proxy-to-socks
+
+EXPOSE 9080
+CMD ["hpts",  "-s", "socks-proxy:2280",  "-l", "http-proxy", "-p", "9080"]
