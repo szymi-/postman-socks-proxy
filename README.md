@@ -10,7 +10,7 @@ You will need an ssh server which will be your proxy, and docker with docker com
 ssh-copy-id myuser@10.0.0.1
 ```
 
-Then, create in this repo an .env file with the following content:
+Then, create in the root of this repo an .env file with the following content:
 
 ```
 JUMP_USER=mysuer
@@ -18,7 +18,7 @@ JUMP_HOST=10.0.0.1
 JUMP_PORT=2222
 ```
 
-Then, copy your `id_rsa` public key to the root of this repo:
+Then, copy your `id_rsa` private key to the root of this repo:
 
 ```
 cp ~/.ssh/id_rsa .
