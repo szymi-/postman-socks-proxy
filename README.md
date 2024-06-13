@@ -4,7 +4,7 @@ This is a simple proxy using a combination of socks proxy and http proxy open so
 
 ## How to use
 
-You will need a ssh server which will be your proxy, and docker with docker compose on the machine from which you want to connect. On the ssh server to be used as a proxy, you will need to have a user with an ssh key configured. For example, you can configure your user to use your ssh key like so (adjust username and ip address accordingly):
+You will need an ssh server which will be your proxy, and docker with docker compose on the machine from which you want to connect. On the ssh server to be used as a proxy, you will need to have a user with an ssh key configured. For example, you can configure your user to use your ssh key like so (adjust username and ip address accordingly):
 
 ```
 ssh-copy-id myuser@10.0.0.1
