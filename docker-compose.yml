@@ -17,8 +17,3 @@ services:
       - 9080:9080
     restart: unless-stopped
     command: ["hpts",  "-s", "socks-proxy:${JUMP_PORT}",  "-l", "http-proxy", "-p", "9080"]
-
-volumes:
-  airflow-db:
-  vault-config:
-  vault-file:
